@@ -1,4 +1,4 @@
 # This is study Python.
-def info_kwargs(**kwargs):
-    [print(f'{k} = {v}') for k, v in sorted(kwargs.items())]
+sale_lambda = lambda x: x*0.9 if x>50 else x
+print(sale_lambda(float(input())))
 
