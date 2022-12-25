@@ -1,11 +1,19 @@
-# This is study Python.
-models = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
-          {'make': 'Mi Max', 'model': 2, 'color': 'Gold'},
-          {'make': 'Samsung', 'model': 7, 'color': 'Blue'},
-          {'make': 'Apple', 'model': 10, 'color': 'Silver'},
-          {'make': 'Oppo', 'model': 9, 'color': 'Red'},
-          {'make': 'Huawei', 'model': 4, 'color': 'Grey'},
-          {'make': 'Honor', 'model': 3, 'color': 'Black'}]
+from processing import *
 
-for k in sorted(models, key=lambda k: k['color']):
-    print(f"Производитель: {k['make']}, модель: {k['model']}, цвет: {k['color']}")
+def setup():
+    size(800,800)
+
+angle= 90
+def draw():
+    global angle
+    background(0)
+    translate(width/2, height/2)
+    stroke(100,50, 255)
+    strokeWeight(3)
+    for i in reversed(renge(0,300,10)):
+        pushMatrix()
+        rotate(cos(radians(angle+i)))
+        ellipse(200*sin(radians(angle)),0,i,i)
+        popMatrix()
+    angle=angle+1
+run()
