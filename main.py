@@ -1,5 +1,11 @@
 # This is study Python.
-subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Physics', 93),('History', 82)]
-s= sorted(subject_marks, key=lambda x: x[1], reverse=True)
-for i in s:
-    print(*i)
+models = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
+          {'make': 'Mi Max', 'model': 2, 'color': 'Gold'},
+          {'make': 'Samsung', 'model': 7, 'color': 'Blue'},
+          {'make': 'Apple', 'model': 10, 'color': 'Silver'},
+          {'make': 'Oppo', 'model': 9, 'color': 'Red'},
+          {'make': 'Huawei', 'model': 4, 'color': 'Grey'},
+          {'make': 'Honor', 'model': 3, 'color': 'Black'}]
+
+for k in sorted(models, key=lambda k: k['color']):
+    print(f"Производитель: {k['make']}, модель: {k['model']}, цвет: {k['color']}")
