@@ -1,5 +1,10 @@
-def get_name_and_decades(name, age):
-    print(f"My name is {name} and I'm {age / 10:.5f} decades old.")
-
-
-get_name_and_decades("Leo", 31)
+def multiply(val):
+    def multiply_two(x):
+        print(f'Умножение {x} на {x} = {val*x}')
+    return multiply_two
+f_2 = multiply(2)
+f_2(5)
+f_2(15)
+f_3 = multiply(3)
+f_3(5)
+f_3(15)
